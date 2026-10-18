@@ -1,0 +1,51 @@
+{
+  "timestamp_utc": "2026-10-18T19:10:38.804590+00:00",
+  "system": {
+    "os": "macOS-27.0.1-arm64-arm-64bit",
+    "architecture": "arm64",
+    "python": "3.11.17",
+    "cpu": "arm",
+    "logical_cores": 12,
+    "physical_cores": 12,
+    "performance_cores": "6",
+    "efficiency_cores": "6"
+  },
+  "memory": {
+    "total_gb": 36.0,
+    "available_gb": 14.86
+  },
+  "storage": {
+    "total_gb": 926.35,
+    "free_gb": 253.41
+  },
+  "accelerators": {
+    "pytorch_cuda_available": false,
+    "pytorch_mps_available": true,
+    "apple_chip_info": "Apple M3 Pro",
+    "apple_gpu_cores": 18
+  },
+  "packages": {
+    "torch": "2.14.1",
+    "torchvision": "0.29.1",
+    "numpy": "2.4.6",
+    "opencv-python": "5.0.0.93",
+    "scikit-learn": "1.9.1"
+  },
+  "benchmarks": {
+    "numpy_matmul_cpu": {
+      "matrix_size": 1024,
+      "repeats": 5,
+      "median_seconds": 0.0016
+    },
+    "torch_matmul_cpu": {
+      "matrix_size": 1024,
+      "repeats": 5,
+      "median_seconds": 0.0015
+    },
+    "torch_matmul_mps": {
+      "matrix_size": 1024,
+      "repeats": 5,
+      "median_seconds": 0.002
+    }
+  }
+}
