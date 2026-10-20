@@ -218,3 +218,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+data/mvtec_anomaly_detection/**/**/**/**.png
+.DS_Store
+data/mvtec_anomaly_detection/**.txt
+data/mvtec_anomaly_detection/**/**.txt
