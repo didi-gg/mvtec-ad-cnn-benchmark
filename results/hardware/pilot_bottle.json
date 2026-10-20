@@ -1,0 +1,84 @@
+{
+  "timestamp_utc": "2026-10-20T04:18:48.653919+00:00",
+  "category": "bottle",
+  "device": "mps",
+  "image_size": 256,
+  "measurements": [
+    {
+      "workload": "autoencoder",
+      "parameters": 47107,
+      "train_images": 167,
+      "batch_size": 8,
+      "epoch_seconds": 2.81,
+      "training_loss": 0.375826,
+      "inference_median_ms": 1.482,
+      "inference_p95_ms": 1.892,
+      "memory_snapshot": {
+        "process_rss_gb": 0.629,
+        "mps_driver_gb": 1.054
+      }
+    },
+    {
+      "workload": "patchcore_resnet18",
+      "sampling_method": "random_pilot_only",
+      "variants": [
+        {
+          "fraction": 0.01,
+          "total_features": 171008,
+          "retained_features": 1710,
+          "feature_extraction_seconds": 2.257,
+          "bank_sampling_seconds": 0.002,
+          "bank_size_mb": 2.5,
+          "inference_median_ms": 4.821,
+          "inference_p95_ms": 5.923,
+          "memory_snapshot": {
+            "process_rss_gb": 1.151,
+            "mps_driver_gb": 1.071
+          }
+        },
+        {
+          "fraction": 0.05,
+          "total_features": 171008,
+          "retained_features": 8550,
+          "feature_extraction_seconds": 2.257,
+          "bank_sampling_seconds": 0.003,
+          "bank_size_mb": 12.52,
+          "inference_median_ms": 7.486,
+          "inference_p95_ms": 8.923,
+          "memory_snapshot": {
+            "process_rss_gb": 1.163,
+            "mps_driver_gb": 1.07
+          }
+        }
+      ]
+    },
+    {
+      "workload": "dual_unet_small",
+      "parameters": 237012,
+      "train_images": 167,
+      "batch_size": 2,
+      "epoch_seconds": 5.78,
+      "training_loss": 0.849647,
+      "inference_median_ms": 3.914,
+      "inference_p95_ms": 4.339,
+      "memory_snapshot": {
+        "process_rss_gb": 1.203,
+        "mps_driver_gb": 1.077
+      }
+    },
+    {
+      "workload": "dual_unet_large",
+      "parameters": 975060,
+      "train_images": 167,
+      "batch_size": 2,
+      "epoch_seconds": 5.485,
+      "training_loss": 0.695235,
+      "inference_median_ms": 5.128,
+      "inference_p95_ms": 5.282,
+      "memory_snapshot": {
+        "process_rss_gb": 1.234,
+        "mps_driver_gb": 1.177
+      }
+    }
+  ]
+}

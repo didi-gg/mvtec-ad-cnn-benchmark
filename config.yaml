@@ -37,8 +37,7 @@ validation:
 
 experiment:
   device: mps
-  # Se determinará después del piloto de hardware
-  budget_minutes_per_model_category: null
+  budget_minutes_per_model_category: 20
   training_seed: 1926
   max_epochs: 100
 

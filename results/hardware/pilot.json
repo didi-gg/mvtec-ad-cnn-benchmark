@@ -1,0 +1,39 @@
+{
+  "timestamp_utc": "2026-10-20T04:12:37.044874+00:00",
+  "device": "mps",
+  "image_size": 256,
+  "warmup": 3,
+  "repeats": 10,
+  "measurements": [
+    {
+      "workload": "autoencoder_proxy",
+      "batch_size": 8,
+      "training": true,
+      "median_step_seconds": 0.0191,
+      "p95_step_seconds": 0.0194,
+      "max_process_rss_gb": 0.45,
+      "mps_allocated_gb": 0.007,
+      "mps_driver_allocated_gb": 1.054
+    },
+    {
+      "workload": "resnet18_feature_extraction_proxy",
+      "batch_size": 4,
+      "training": false,
+      "median_step_seconds": 0.0067,
+      "p95_step_seconds": 0.0067,
+      "max_process_rss_gb": 0.495,
+      "mps_allocated_gb": 0.013,
+      "mps_driver_allocated_gb": 1.061
+    },
+    {
+      "workload": "dual_network_proxy",
+      "batch_size": 2,
+      "training": true,
+      "median_step_seconds": 0.013,
+      "p95_step_seconds": 0.0134,
+      "max_process_rss_gb": 0.513,
+      "mps_allocated_gb": 0.013,
+      "mps_driver_allocated_gb": 0.171
+    }
+  ]
+}
