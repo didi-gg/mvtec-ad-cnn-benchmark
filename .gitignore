@@ -222,3 +222,5 @@ data/mvtec_anomaly_detection/**/**/**/**.png
 .DS_Store
 data/mvtec_anomaly_detection/**.txt
 data/mvtec_anomaly_detection/**/**.txt
+results/validation/**/images/**.png
+results/validation/**/masks/**.png
