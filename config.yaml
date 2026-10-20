@@ -1,0 +1,124 @@
+project:
+  name: mvtec-ad-cnn-benchmark
+  seed: 1926
+
+data:
+  path: data/mvtec_anomaly_detection
+  splits_path: results/splits
+  categories:
+    - bottle
+    - cable
+    - capsule
+    - carpet
+    - grid
+    - hazelnut
+    - leather
+    - metal_nut
+    - pill
+    - screw
+    - tile
+    - toothbrush
+    - transistor
+    - wood
+    - zipper
+  image_size: 256
+
+validation:
+  output_path: results/validation
+  seed: 2026
+  # Validación común para los tres modelos
+  synthetic_anomalies:
+    - cutpaste
+    - irregular_texture
+  # Selección y calibración sin utilizar el test oficial
+  selection_metric: image_auroc
+  image_threshold: optimize_f1
+  pixel_threshold: optimize_dice
+
+experiment:
+  device: mps
+  # Se determinará después del piloto de hardware
+  budget_minutes_per_model_category: null
+  training_seed: 1926
+  max_epochs: 100
+
+models:
+  autoencoder:
+    architecture: cnn_autoencoder
+    channels: [16, 32, 64]
+    batch_size: 8
+    optimizer: adam
+    learning_rate: 0.001
+    patience: 7
+    # H1: influencia de la función de pérdida
+    variants:
+      mse:
+        loss: mse
+      l1:
+        loss: l1
+
+  patchcore:
+    backbone: resnet18
+    pretrained: true
+    feature_layers: [layer2, layer3]
+    batch_size: 4
+    neighbors: 1
+    sampling: approximate_coreset
+    # H2: porcentaje de características conservadas
+    variants:
+      coreset_1:
+        fraction: 0.01
+      coreset_5:
+        fraction: 0.05
+
+  dual_unet:
+    architecture: reconstruction_segmentation
+    batch_size: 2
+    optimizer: adam
+    learning_rate: 0.0001
+    patience: 8
+    reconstruction_loss: l1
+    segmentation_loss: bce_dice
+    # Anomalías sintéticas solo a partir del train
+    training_anomalies:
+      - cutpaste
+      - irregular_texture
+    # H3: influencia de la capacidad arquitectónica
+    variants:
+      small:
+        channels: [16, 32, 64]
+      large:
+        channels: [16, 32, 64, 128]
+
+evaluation:
+  classification:
+    primary: image_auroc
+    secondary:
+      - precision
+      - recall
+      - f1
+      - confusion_matrix
+
+  segmentation:
+    primary: aupro
+    aupro_fpr_limit: 0.30
+    secondary:
+      - iou
+      - dice
+
+  efficiency:
+    - training_time
+    - latency_p95
+    - fps
+    - peak_memory
+
+  inference_batch_size: 1
+  warmup_iterations: 20
+  measured_iterations: 100
+  report_per_category: true
+  macro_average: true
+
+results:
+  runs: results/runs
+  final: results/final
+  figures: results/figures
