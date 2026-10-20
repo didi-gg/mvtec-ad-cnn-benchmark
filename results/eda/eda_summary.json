@@ -1,0 +1,12 @@
+{
+  "categories_expected":15,
+  "categories_verified":15,
+  "total_images":5354,
+  "train_images":3629,
+  "test_images":1725,
+  "defective_test_images":1258,
+  "missing_masks":0,
+  "dimension_mismatches":0,
+  "empty_masks":0,
+  "unique_resolutions":6
+}
