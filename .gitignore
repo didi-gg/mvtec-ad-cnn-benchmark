@@ -225,3 +225,5 @@ data/mvtec_anomaly_detection/**/**.txt
 results/validation/**/images/**.png
 results/validation/**/masks/**.png
 results/hardware/**_test.pt
+results/runs/**/**/**/**.pt
+**.zip
