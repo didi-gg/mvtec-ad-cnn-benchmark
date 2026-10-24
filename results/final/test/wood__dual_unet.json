@@ -1,0 +1,30 @@
+{
+  "category": "wood",
+  "model": "dual_unet",
+  "selected_variant": "large",
+  "selection_metric": "synthetic_validation_image_auroc",
+  "validation_image_auroc": 0.8575593502707205,
+  "validation_aupro": 0.9350446390047387,
+  "image_threshold": 0.3022432327270508,
+  "pixel_threshold": 0.3397699028253612,
+  "test_images": 79,
+  "test_anomalous_images": 60,
+  "test_normal_images": 19,
+  "image_auroc": 0.9535087719298245,
+  "precision": 0.8428571428571429,
+  "recall": 0.9833333333333333,
+  "f1": 0.9076923076923077,
+  "aupro": 0.5944970066332793,
+  "iou": 0.13403319465037514,
+  "dice": 0.2363831945707689,
+  "latency_mean_ms": 8.564543772144699,
+  "latency_p95_ms": 11.739933600074433,
+  "fps": 116.76045176538155,
+  "fit_seconds": 604.109,
+  "confusion_matrix": {
+    "tn": 8,
+    "fp": 11,
+    "fn": 1,
+    "tp": 59
+  }
+}

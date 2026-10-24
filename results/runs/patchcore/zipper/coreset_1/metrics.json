@@ -1,0 +1,63 @@
+{
+  "category": "zipper",
+  "model": "patchcore",
+  "variant": "coreset_1",
+  "seed": 1926,
+  "image_size": 256,
+  "model_configuration": {
+    "backbone": "resnet18",
+    "pretrained": true,
+    "feature_layers": [
+      "layer2",
+      "layer3"
+    ],
+    "batch_size": 4,
+    "neighbors": 1,
+    "sampling": "approximate_coreset",
+    "variants": {
+      "coreset_1": {
+        "fraction": 0.01
+      },
+      "coreset_5": {
+        "fraction": 0.05
+      }
+    }
+  },
+  "variant_configuration": {
+    "fraction": 0.01
+  },
+  "best_epoch": null,
+  "best_validation_image_auroc": null,
+  "stop_reason": "completed",
+  "fit_seconds": 3.554,
+  "validation_seconds": 5.185,
+  "total_seconds": 8.739,
+  "budget_minutes": 10.0,
+  "budget_exceeded": false,
+  "fit_details": {
+    "total_features": 196608,
+    "retained_features": 1966
+  },
+  "training_history": [],
+  "validation": {
+    "image_threshold": 1.9455616474151611,
+    "pixel_threshold": 2.720112693309784,
+    "detection": {
+      "image_auroc": 0.9842664930555556,
+      "precision": 1.0,
+      "recall": 0.9583333333333334,
+      "f1": 0.9787234042553191,
+      "confusion_matrix": {
+        "tn": 48,
+        "fp": 0,
+        "fn": 4,
+        "tp": 92
+      }
+    },
+    "segmentation": {
+      "aupro": 0.886795313414439,
+      "iou": 0.5715057828189035,
+      "dice": 0.7273352590453209
+    }
+  }
+}

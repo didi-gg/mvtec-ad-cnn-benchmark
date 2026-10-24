@@ -1,0 +1,63 @@
+{
+  "category": "transistor",
+  "model": "patchcore",
+  "variant": "coreset_1",
+  "seed": 1926,
+  "image_size": 256,
+  "model_configuration": {
+    "backbone": "resnet18",
+    "pretrained": true,
+    "feature_layers": [
+      "layer2",
+      "layer3"
+    ],
+    "batch_size": 4,
+    "neighbors": 1,
+    "sampling": "approximate_coreset",
+    "variants": {
+      "coreset_1": {
+        "fraction": 0.01
+      },
+      "coreset_5": {
+        "fraction": 0.05
+      }
+    }
+  },
+  "variant_configuration": {
+    "fraction": 0.01
+  },
+  "best_epoch": null,
+  "best_validation_image_auroc": null,
+  "stop_reason": "completed",
+  "fit_seconds": 4.791,
+  "validation_seconds": 4.468,
+  "total_seconds": 9.259,
+  "budget_minutes": 10.0,
+  "budget_exceeded": false,
+  "fit_details": {
+    "total_features": 174080,
+    "retained_features": 1741
+  },
+  "training_history": [],
+  "validation": {
+    "image_threshold": 2.777862310409546,
+    "pixel_threshold": 2.7208294725418085,
+    "detection": {
+      "image_auroc": 0.9744456462952947,
+      "precision": 0.9444444444444444,
+      "recall": 0.9883720930232558,
+      "f1": 0.9659090909090909,
+      "confusion_matrix": {
+        "tn": 38,
+        "fp": 5,
+        "fn": 1,
+        "tp": 85
+      }
+    },
+    "segmentation": {
+      "aupro": 0.8966547298581148,
+      "iou": 0.5999317475314364,
+      "dice": 0.7499466754842286
+    }
+  }
+}

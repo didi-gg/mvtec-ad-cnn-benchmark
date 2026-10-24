@@ -1,0 +1,271 @@
+{
+  "category": "cable",
+  "model": "autoencoder",
+  "variant": "mse",
+  "seed": 1926,
+  "image_size": 256,
+  "model_configuration": {
+    "architecture": "cnn_autoencoder",
+    "channels": [
+      16,
+      32,
+      64
+    ],
+    "batch_size": 8,
+    "optimizer": "adam",
+    "learning_rate": 0.001,
+    "patience": 7,
+    "variants": {
+      "mse": {
+        "loss": "mse"
+      },
+      "l1": {
+        "loss": "l1"
+      }
+    }
+  },
+  "variant_configuration": {
+    "loss": "mse"
+  },
+  "best_epoch": 5,
+  "best_validation_image_auroc": 0.4623456790123457,
+  "stop_reason": "early_stopping",
+  "fit_seconds": 150.057,
+  "validation_seconds": 7.371,
+  "total_seconds": 157.428,
+  "budget_minutes": 10.0,
+  "budget_exceeded": false,
+  "fit_details": {},
+  "training_history": [
+    {
+      "epoch": 1,
+      "training_loss": 0.06141982234847945,
+      "epoch_seconds": 4.25,
+      "validation_image_auroc": 0.4498765432098766
+    },
+    {
+      "epoch": 2,
+      "training_loss": 0.018252156549991842,
+      "epoch_seconds": 3.591
+    },
+    {
+      "epoch": 3,
+      "training_loss": 0.012951286145428705,
+      "epoch_seconds": 3.618
+    },
+    {
+      "epoch": 4,
+      "training_loss": 0.009309060153598225,
+      "epoch_seconds": 3.614
+    },
+    {
+      "epoch": 5,
+      "training_loss": 0.0075246348649305,
+      "epoch_seconds": 3.601,
+      "validation_image_auroc": 0.4623456790123457
+    },
+    {
+      "epoch": 6,
+      "training_loss": 0.006220796881711849,
+      "epoch_seconds": 3.639
+    },
+    {
+      "epoch": 7,
+      "training_loss": 0.005218943206374871,
+      "epoch_seconds": 3.593
+    },
+    {
+      "epoch": 8,
+      "training_loss": 0.004532611463218927,
+      "epoch_seconds": 3.578
+    },
+    {
+      "epoch": 9,
+      "training_loss": 0.004284700002864669,
+      "epoch_seconds": 3.636
+    },
+    {
+      "epoch": 10,
+      "training_loss": 0.004087774098627061,
+      "epoch_seconds": 3.586,
+      "validation_image_auroc": 0.43888888888888883
+    },
+    {
+      "epoch": 11,
+      "training_loss": 0.004005888267550306,
+      "epoch_seconds": 3.609
+    },
+    {
+      "epoch": 12,
+      "training_loss": 0.003787630726713375,
+      "epoch_seconds": 3.613
+    },
+    {
+      "epoch": 13,
+      "training_loss": 0.0039203500260687404,
+      "epoch_seconds": 3.676
+    },
+    {
+      "epoch": 14,
+      "training_loss": 0.0036044118941537828,
+      "epoch_seconds": 3.632
+    },
+    {
+      "epoch": 15,
+      "training_loss": 0.003454961253371735,
+      "epoch_seconds": 3.631,
+      "validation_image_auroc": 0.43382716049382714
+    },
+    {
+      "epoch": 16,
+      "training_loss": 0.0034121405840565207,
+      "epoch_seconds": 3.649
+    },
+    {
+      "epoch": 17,
+      "training_loss": 0.003339543426149218,
+      "epoch_seconds": 3.633
+    },
+    {
+      "epoch": 18,
+      "training_loss": 0.003313704177882918,
+      "epoch_seconds": 3.615
+    },
+    {
+      "epoch": 19,
+      "training_loss": 0.0032325810583714166,
+      "epoch_seconds": 3.639
+    },
+    {
+      "epoch": 20,
+      "training_loss": 0.0032478480082130134,
+      "epoch_seconds": 3.701,
+      "validation_image_auroc": 0.4311111111111111
+    },
+    {
+      "epoch": 21,
+      "training_loss": 0.00316233759324519,
+      "epoch_seconds": 3.659
+    },
+    {
+      "epoch": 22,
+      "training_loss": 0.0031518441515678134,
+      "epoch_seconds": 3.711
+    },
+    {
+      "epoch": 23,
+      "training_loss": 0.003109612546382503,
+      "epoch_seconds": 3.672
+    },
+    {
+      "epoch": 24,
+      "training_loss": 0.0031182976080593784,
+      "epoch_seconds": 3.642
+    },
+    {
+      "epoch": 25,
+      "training_loss": 0.0030304772932831636,
+      "epoch_seconds": 3.658,
+      "validation_image_auroc": 0.4192592592592593
+    },
+    {
+      "epoch": 26,
+      "training_loss": 0.0031092282418452993,
+      "epoch_seconds": 3.68
+    },
+    {
+      "epoch": 27,
+      "training_loss": 0.002973968973487366,
+      "epoch_seconds": 3.701
+    },
+    {
+      "epoch": 28,
+      "training_loss": 0.0029899735178007592,
+      "epoch_seconds": 3.682
+    },
+    {
+      "epoch": 29,
+      "training_loss": 0.0029174827817078242,
+      "epoch_seconds": 3.685
+    },
+    {
+      "epoch": 30,
+      "training_loss": 0.00296027675224208,
+      "epoch_seconds": 3.672,
+      "validation_image_auroc": 0.419753086419753
+    },
+    {
+      "epoch": 31,
+      "training_loss": 0.002874083610189111,
+      "epoch_seconds": 3.694
+    },
+    {
+      "epoch": 32,
+      "training_loss": 0.002913547074942532,
+      "epoch_seconds": 3.655
+    },
+    {
+      "epoch": 33,
+      "training_loss": 0.0028709264864947375,
+      "epoch_seconds": 3.713
+    },
+    {
+      "epoch": 34,
+      "training_loss": 0.0028123441659559253,
+      "epoch_seconds": 3.701
+    },
+    {
+      "epoch": 35,
+      "training_loss": 0.0028086423850488228,
+      "epoch_seconds": 3.694,
+      "validation_image_auroc": 0.43283950617283956
+    },
+    {
+      "epoch": 36,
+      "training_loss": 0.0028946408767815076,
+      "epoch_seconds": 3.703
+    },
+    {
+      "epoch": 37,
+      "training_loss": 0.002835709324585243,
+      "epoch_seconds": 3.68
+    },
+    {
+      "epoch": 38,
+      "training_loss": 0.0027265971352205764,
+      "epoch_seconds": 3.689
+    },
+    {
+      "epoch": 39,
+      "training_loss": 0.002754091143389571,
+      "epoch_seconds": 3.764
+    },
+    {
+      "epoch": 40,
+      "training_loss": 0.002927679924929109,
+      "epoch_seconds": 3.716,
+      "validation_image_auroc": 0.4395061728395062
+    }
+  ],
+  "validation": {
+    "image_threshold": 0.5816729664802551,
+    "pixel_threshold": 0.0395073564350605,
+    "detection": {
+      "image_auroc": 0.4623456790123457,
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "f1": 0.8,
+      "confusion_matrix": {
+        "tn": 0,
+        "fp": 45,
+        "fn": 0,
+        "tp": 90
+      }
+    },
+    "segmentation": {
+      "aupro": 0.12495234069378877,
+      "iou": 0.13661048904263715,
+      "dice": 0.24038224239458436
+    }
+  }
+}

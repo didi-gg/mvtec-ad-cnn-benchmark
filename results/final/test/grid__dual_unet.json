@@ -1,0 +1,30 @@
+{
+  "category": "grid",
+  "model": "dual_unet",
+  "selected_variant": "small",
+  "selection_metric": "synthetic_validation_image_auroc",
+  "validation_image_auroc": 1.0,
+  "validation_aupro": 0.9675836214702157,
+  "image_threshold": 0.9850385785102844,
+  "pixel_threshold": 0.8420883303880741,
+  "test_images": 78,
+  "test_anomalous_images": 57,
+  "test_normal_images": 21,
+  "image_auroc": 0.9657477025898078,
+  "precision": 0.9777777777777777,
+  "recall": 0.7719298245614035,
+  "f1": 0.8627450980392157,
+  "aupro": 0.8145061644100252,
+  "iou": 0.10519777936077146,
+  "dice": 0.19036914717945985,
+  "latency_mean_ms": 5.381552397437144,
+  "latency_p95_ms": 5.5544018499972445,
+  "fps": 185.81998764450012,
+  "fit_seconds": 606.337,
+  "confusion_matrix": {
+    "tn": 20,
+    "fp": 1,
+    "fn": 13,
+    "tp": 44
+  }
+}

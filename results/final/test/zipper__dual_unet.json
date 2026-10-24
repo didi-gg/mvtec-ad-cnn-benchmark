@@ -1,0 +1,30 @@
+{
+  "category": "zipper",
+  "model": "dual_unet",
+  "selected_variant": "small",
+  "selection_metric": "synthetic_validation_image_auroc",
+  "validation_image_auroc": 0.9062499999999999,
+  "validation_aupro": 0.896708185600883,
+  "image_threshold": 0.6473824381828308,
+  "pixel_threshold": 0.727401648759844,
+  "test_images": 151,
+  "test_anomalous_images": 119,
+  "test_normal_images": 32,
+  "image_auroc": 0.7868960084033614,
+  "precision": 0.9803921568627451,
+  "recall": 0.42016806722689076,
+  "f1": 0.5882352941176471,
+  "aupro": 0.3680319237632729,
+  "iou": 0.03528281296777371,
+  "dice": 0.06816072386371587,
+  "latency_mean_ms": 5.379169721847562,
+  "latency_p95_ms": 5.736686999966878,
+  "fps": 185.90229565326558,
+  "fit_seconds": 309.816,
+  "confusion_matrix": {
+    "tn": 31,
+    "fp": 1,
+    "fn": 69,
+    "tp": 50
+  }
+}

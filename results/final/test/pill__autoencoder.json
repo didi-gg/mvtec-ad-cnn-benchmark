@@ -1,0 +1,30 @@
+{
+  "category": "pill",
+  "model": "autoencoder",
+  "selected_variant": "mse",
+  "selection_metric": "synthetic_validation_image_auroc",
+  "validation_image_auroc": 0.97312210751157,
+  "validation_aupro": 0.6930631367344163,
+  "image_threshold": 0.2646028697490692,
+  "pixel_threshold": 0.0354095958173275,
+  "test_images": 167,
+  "test_anomalous_images": 141,
+  "test_normal_images": 26,
+  "image_auroc": 0.5332787779596291,
+  "precision": 0.9655172413793104,
+  "recall": 0.19858156028368795,
+  "f1": 0.32941176470588235,
+  "aupro": 0.6616318943725504,
+  "iou": 0.10117780074247176,
+  "dice": 0.18376287766471933,
+  "latency_mean_ms": 2.602841562884078,
+  "latency_p95_ms": 3.346275000080823,
+  "fps": 384.19549397849255,
+  "fit_seconds": 111.385,
+  "confusion_matrix": {
+    "tn": 25,
+    "fp": 1,
+    "fn": 113,
+    "tp": 28
+  }
+}

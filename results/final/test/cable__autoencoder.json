@@ -1,0 +1,30 @@
+{
+  "category": "cable",
+  "model": "autoencoder",
+  "selected_variant": "l1",
+  "selection_metric": "synthetic_validation_image_auroc",
+  "validation_image_auroc": 0.4759259259259259,
+  "validation_aupro": 0.1405842830855878,
+  "image_threshold": 0.5685853362083435,
+  "pixel_threshold": 0.03110228545963764,
+  "test_images": 150,
+  "test_anomalous_images": 92,
+  "test_normal_images": 58,
+  "image_auroc": 0.46064467766116934,
+  "precision": 0.6081081081081081,
+  "recall": 0.9782608695652174,
+  "f1": 0.75,
+  "aupro": 0.274157190589398,
+  "iou": 0.04363594474266957,
+  "dice": 0.08362292418632425,
+  "latency_mean_ms": 3.0850000533291677,
+  "latency_p95_ms": 3.5511982500906925,
+  "fps": 324.1491029865148,
+  "fit_seconds": 152.464,
+  "confusion_matrix": {
+    "tn": 0,
+    "fp": 58,
+    "fn": 2,
+    "tp": 90
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "category": "carpet",
+  "model": "autoencoder",
+  "selected_variant": "mse",
+  "selection_metric": "synthetic_validation_image_auroc",
+  "validation_image_auroc": 0.5270248724489796,
+  "validation_aupro": 0.04389249919654079,
+  "image_threshold": 0.24998092651367188,
+  "pixel_threshold": 0.011166770942509174,
+  "test_images": 117,
+  "test_anomalous_images": 89,
+  "test_normal_images": 28,
+  "image_auroc": 0.4357945425361156,
+  "precision": 0.7606837606837606,
+  "recall": 1.0,
+  "f1": 0.8640776699029126,
+  "aupro": 0.19830637416825914,
+  "iou": 0.016087216979298775,
+  "dice": 0.03166503172261939,
+  "latency_mean_ms": 2.960314880349551,
+  "latency_p95_ms": 3.3341750001000032,
+  "fps": 337.8019029792942,
+  "fit_seconds": 435.588,
+  "confusion_matrix": {
+    "tn": 0,
+    "fp": 28,
+    "fn": 0,
+    "tp": 89
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "category": "tile",
+  "model": "autoencoder",
+  "selected_variant": "mse",
+  "selection_metric": "synthetic_validation_image_auroc",
+  "validation_image_auroc": 0.475070888468809,
+  "validation_aupro": 0.05907547965282419,
+  "image_threshold": 0.18329934775829315,
+  "pixel_threshold": 0.012648780830204487,
+  "test_images": 117,
+  "test_anomalous_images": 84,
+  "test_normal_images": 33,
+  "image_auroc": 0.7734487734487734,
+  "precision": 0.717948717948718,
+  "recall": 1.0,
+  "f1": 0.835820895522388,
+  "aupro": 0.26661060796734937,
+  "iou": 0.07390327432336911,
+  "dice": 0.13763488032929802,
+  "latency_mean_ms": 2.860419888891665,
+  "latency_p95_ms": 3.346733200078233,
+  "fps": 349.59902351520594,
+  "fit_seconds": 310.153,
+  "confusion_matrix": {
+    "tn": 0,
+    "fp": 33,
+    "fn": 0,
+    "tp": 84
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "category": "transistor",
+  "model": "autoencoder",
+  "selected_variant": "l1",
+  "selection_metric": "synthetic_validation_image_auroc",
+  "validation_image_auroc": 0.48269334775554357,
+  "validation_aupro": 0.582914962074131,
+  "image_threshold": 0.3674551546573639,
+  "pixel_threshold": 0.06142984703183174,
+  "test_images": 100,
+  "test_anomalous_images": 40,
+  "test_normal_images": 60,
+  "image_auroc": 0.5729166666666667,
+  "precision": 0.4,
+  "recall": 1.0,
+  "f1": 0.5714285714285714,
+  "aupro": 0.20136799910772754,
+  "iou": 0.04043920416112705,
+  "dice": 0.07773487196444484,
+  "latency_mean_ms": 3.408197510004811,
+  "latency_p95_ms": 5.0014961499755355,
+  "fps": 293.4102255120151,
+  "fit_seconds": 143.87,
+  "confusion_matrix": {
+    "tn": 0,
+    "fp": 60,
+    "fn": 0,
+    "tp": 40
+  }
+}

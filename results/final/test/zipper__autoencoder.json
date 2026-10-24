@@ -1,0 +1,30 @@
+{
+  "category": "zipper",
+  "model": "autoencoder",
+  "selected_variant": "mse",
+  "selection_metric": "synthetic_validation_image_auroc",
+  "validation_image_auroc": 0.8165147569444445,
+  "validation_aupro": 0.5035367864796814,
+  "image_threshold": 0.3420667350292206,
+  "pixel_threshold": 0.048277924582362186,
+  "test_images": 151,
+  "test_anomalous_images": 119,
+  "test_normal_images": 32,
+  "image_auroc": 0.7830882352941176,
+  "precision": 0.9247311827956989,
+  "recall": 0.7226890756302521,
+  "f1": 0.8113207547169812,
+  "aupro": 0.3686452769336344,
+  "iou": 0.05667432697696556,
+  "dice": 0.10726924186585447,
+  "latency_mean_ms": 2.6213159404017983,
+  "latency_p95_ms": 3.2868745000769195,
+  "fps": 381.4877804644635,
+  "fit_seconds": 248.567,
+  "confusion_matrix": {
+    "tn": 25,
+    "fp": 7,
+    "fn": 33,
+    "tp": 86
+  }
+}

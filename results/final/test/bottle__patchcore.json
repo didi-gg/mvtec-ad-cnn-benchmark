@@ -1,0 +1,30 @@
+{
+  "category": "bottle",
+  "model": "patchcore",
+  "selected_variant": "coreset_5",
+  "selection_metric": "synthetic_validation_image_auroc",
+  "validation_image_auroc": 0.9994331065759637,
+  "validation_aupro": 0.9045573698287629,
+  "image_threshold": 2.207612991333008,
+  "pixel_threshold": 2.984444189071655,
+  "test_images": 83,
+  "test_anomalous_images": 63,
+  "test_normal_images": 20,
+  "image_auroc": 1.0,
+  "precision": 1.0,
+  "recall": 1.0,
+  "f1": 1.0,
+  "aupro": 0.9398564974325645,
+  "iou": 0.3159879582878896,
+  "dice": 0.4802292548314688,
+  "latency_mean_ms": 12.68147539757954,
+  "latency_p95_ms": 14.07082090004223,
+  "fps": 78.85517801744629,
+  "fit_seconds": 7.582,
+  "confusion_matrix": {
+    "tn": 20,
+    "fp": 0,
+    "fn": 0,
+    "tp": 63
+  }
+}

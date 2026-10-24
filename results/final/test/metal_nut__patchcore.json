@@ -1,0 +1,30 @@
+{
+  "category": "metal_nut",
+  "model": "patchcore",
+  "selected_variant": "coreset_5",
+  "selection_metric": "synthetic_validation_image_auroc",
+  "validation_image_auroc": 0.9927685950413223,
+  "validation_aupro": 0.8899611028177098,
+  "image_threshold": 2.837000846862793,
+  "pixel_threshold": 2.630863356590271,
+  "test_images": 115,
+  "test_anomalous_images": 93,
+  "test_normal_images": 22,
+  "image_auroc": 0.9824046920821115,
+  "precision": 1.0,
+  "recall": 0.8172043010752689,
+  "f1": 0.8994082840236687,
+  "aupro": 0.9289595611052525,
+  "iou": 0.33716670576065183,
+  "dice": 0.50430018083475,
+  "latency_mean_ms": 11.305998886957795,
+  "latency_p95_ms": 11.854120799989687,
+  "fps": 88.44862006430631,
+  "fit_seconds": 5.929,
+  "confusion_matrix": {
+    "tn": 22,
+    "fp": 0,
+    "fn": 17,
+    "tp": 76
+  }
+}

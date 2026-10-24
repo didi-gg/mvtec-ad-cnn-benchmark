@@ -1,0 +1,30 @@
+{
+  "category": "screw",
+  "model": "autoencoder",
+  "selected_variant": "mse",
+  "selection_metric": "synthetic_validation_image_auroc",
+  "validation_image_auroc": 0.8604736328125,
+  "validation_aupro": 0.5721538957932775,
+  "image_threshold": 0.2527925968170166,
+  "pixel_threshold": 0.018736978992819786,
+  "test_images": 160,
+  "test_anomalous_images": 119,
+  "test_normal_images": 41,
+  "image_auroc": 0.7841770854683336,
+  "precision": 0.8727272727272727,
+  "recall": 0.40336134453781514,
+  "f1": 0.5517241379310345,
+  "aupro": 0.6524789733664299,
+  "iou": 0.01337277220520079,
+  "dice": 0.026392602153895047,
+  "latency_mean_ms": 2.613244793751335,
+  "latency_p95_ms": 3.2324791998235005,
+  "fps": 382.6660259272885,
+  "fit_seconds": 284.666,
+  "confusion_matrix": {
+    "tn": 34,
+    "fp": 7,
+    "fn": 71,
+    "tp": 48
+  }
+}

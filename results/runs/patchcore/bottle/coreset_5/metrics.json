@@ -1,0 +1,36 @@
+{
+  "category": "bottle",
+  "model": "patchcore",
+  "variant": "coreset_5",
+  "seed": 1926,
+  "fit_seconds": 7.582,
+  "budget_minutes": 10.0,
+  "budget_exceeded": false,
+  "best_validation_image_auroc": null,
+  "fit_details": {
+    "total_features": 171008,
+    "retained_features": 8550
+  },
+  "training_history": [],
+  "validation": {
+    "image_threshold": 2.207612991333008,
+    "pixel_threshold": 2.984444189071655,
+    "detection": {
+      "image_auroc": 0.9994331065759637,
+      "precision": 0.9882352941176471,
+      "recall": 1.0,
+      "f1": 0.9940828402366864,
+      "confusion_matrix": {
+        "tn": 41,
+        "fp": 1,
+        "fn": 0,
+        "tp": 84
+      }
+    },
+    "segmentation": {
+      "aupro": 0.9045573698287629,
+      "iou": 0.5633142112760926,
+      "dice": 0.7206666544869107
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "category": "toothbrush",
+  "model": "patchcore",
+  "variant": "coreset_5",
+  "seed": 1926,
+  "image_size": 256,
+  "model_configuration": {
+    "backbone": "resnet18",
+    "pretrained": true,
+    "feature_layers": [
+      "layer2",
+      "layer3"
+    ],
+    "batch_size": 4,
+    "neighbors": 1,
+    "sampling": "approximate_coreset",
+    "variants": {
+      "coreset_1": {
+        "fraction": 0.01
+      },
+      "coreset_5": {
+        "fraction": 0.05
+      }
+    }
+  },
+  "variant_configuration": {
+    "fraction": 0.05
+  },
+  "best_epoch": null,
+  "best_validation_image_auroc": null,
+  "stop_reason": "completed",
+  "fit_seconds": 2.815,
+  "validation_seconds": 1.334,
+  "total_seconds": 4.149,
+  "budget_minutes": 10.0,
+  "budget_exceeded": false,
+  "fit_details": {
+    "total_features": 49152,
+    "retained_features": 2458
+  },
+  "training_history": [],
+  "validation": {
+    "image_threshold": 2.286212205886841,
+    "pixel_threshold": 2.739644527435301,
+    "detection": {
+      "image_auroc": 0.9097222222222221,
+      "precision": 1.0,
+      "recall": 0.875,
+      "f1": 0.9333333333333333,
+      "confusion_matrix": {
+        "tn": 12,
+        "fp": 0,
+        "fn": 3,
+        "tp": 21
+      }
+    },
+    "segmentation": {
+      "aupro": 0.8603273117169534,
+      "iou": 0.545351882781658,
+      "dice": 0.7057963805628734
+    }
+  }
+}

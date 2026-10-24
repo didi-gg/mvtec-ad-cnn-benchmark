@@ -1,0 +1,271 @@
+{
+  "category": "wood",
+  "model": "autoencoder",
+  "variant": "l1",
+  "seed": 1926,
+  "image_size": 256,
+  "model_configuration": {
+    "architecture": "cnn_autoencoder",
+    "channels": [
+      16,
+      32,
+      64
+    ],
+    "batch_size": 8,
+    "optimizer": "adam",
+    "learning_rate": 0.001,
+    "patience": 7,
+    "variants": {
+      "mse": {
+        "loss": "mse"
+      },
+      "l1": {
+        "loss": "l1"
+      }
+    }
+  },
+  "variant_configuration": {
+    "loss": "l1"
+  },
+  "best_epoch": 5,
+  "best_validation_image_auroc": 0.47896709704289886,
+  "stop_reason": "early_stopping",
+  "fit_seconds": 176.907,
+  "validation_seconds": 7.329,
+  "total_seconds": 184.236,
+  "budget_minutes": 10.0,
+  "budget_exceeded": false,
+  "fit_details": {},
+  "training_history": [
+    {
+      "epoch": 1,
+      "training_loss": 0.18212927275835866,
+      "epoch_seconds": 4.386,
+      "validation_image_auroc": 0.47469804248229897
+    },
+    {
+      "epoch": 2,
+      "training_loss": 0.05000075415679903,
+      "epoch_seconds": 4.356
+    },
+    {
+      "epoch": 3,
+      "training_loss": 0.042418143890722834,
+      "epoch_seconds": 4.329
+    },
+    {
+      "epoch": 4,
+      "training_loss": 0.03950642530966287,
+      "epoch_seconds": 4.354
+    },
+    {
+      "epoch": 5,
+      "training_loss": 0.03756773219716669,
+      "epoch_seconds": 4.3,
+      "validation_image_auroc": 0.47896709704289886
+    },
+    {
+      "epoch": 6,
+      "training_loss": 0.03646985494127177,
+      "epoch_seconds": 4.366
+    },
+    {
+      "epoch": 7,
+      "training_loss": 0.03671561373454152,
+      "epoch_seconds": 4.333
+    },
+    {
+      "epoch": 8,
+      "training_loss": 0.033122765069658104,
+      "epoch_seconds": 4.325
+    },
+    {
+      "epoch": 9,
+      "training_loss": 0.03221162250547698,
+      "epoch_seconds": 4.342
+    },
+    {
+      "epoch": 10,
+      "training_loss": 0.03037603237111159,
+      "epoch_seconds": 4.34,
+      "validation_image_auroc": 0.4700124947938359
+    },
+    {
+      "epoch": 11,
+      "training_loss": 0.02943835367984844,
+      "epoch_seconds": 4.321
+    },
+    {
+      "epoch": 12,
+      "training_loss": 0.028803118081255394,
+      "epoch_seconds": 4.351
+    },
+    {
+      "epoch": 13,
+      "training_loss": 0.02861000954954311,
+      "epoch_seconds": 4.383
+    },
+    {
+      "epoch": 14,
+      "training_loss": 0.02860841520055376,
+      "epoch_seconds": 4.362
+    },
+    {
+      "epoch": 15,
+      "training_loss": 0.02773829431019046,
+      "epoch_seconds": 4.355,
+      "validation_image_auroc": 0.46470220741357765
+    },
+    {
+      "epoch": 16,
+      "training_loss": 0.027585931724370127,
+      "epoch_seconds": 4.367
+    },
+    {
+      "epoch": 17,
+      "training_loss": 0.027984390580894972,
+      "epoch_seconds": 4.367
+    },
+    {
+      "epoch": 18,
+      "training_loss": 0.02681189410463728,
+      "epoch_seconds": 4.336
+    },
+    {
+      "epoch": 19,
+      "training_loss": 0.026541831611533357,
+      "epoch_seconds": 4.337
+    },
+    {
+      "epoch": 20,
+      "training_loss": 0.026205789975144646,
+      "epoch_seconds": 4.34,
+      "validation_image_auroc": 0.4495002082465639
+    },
+    {
+      "epoch": 21,
+      "training_loss": 0.026377517993402,
+      "epoch_seconds": 4.331
+    },
+    {
+      "epoch": 22,
+      "training_loss": 0.026023790108585597,
+      "epoch_seconds": 4.334
+    },
+    {
+      "epoch": 23,
+      "training_loss": 0.02708079379917395,
+      "epoch_seconds": 4.353
+    },
+    {
+      "epoch": 24,
+      "training_loss": 0.02614062714080016,
+      "epoch_seconds": 4.347
+    },
+    {
+      "epoch": 25,
+      "training_loss": 0.025331888046830592,
+      "epoch_seconds": 4.315,
+      "validation_image_auroc": 0.44970845481049565
+    },
+    {
+      "epoch": 26,
+      "training_loss": 0.02524133867612391,
+      "epoch_seconds": 4.365
+    },
+    {
+      "epoch": 27,
+      "training_loss": 0.02475853900265212,
+      "epoch_seconds": 4.343
+    },
+    {
+      "epoch": 28,
+      "training_loss": 0.02483723098129937,
+      "epoch_seconds": 4.367
+    },
+    {
+      "epoch": 29,
+      "training_loss": 0.02418919788165526,
+      "epoch_seconds": 4.355
+    },
+    {
+      "epoch": 30,
+      "training_loss": 0.02403634073532591,
+      "epoch_seconds": 4.412,
+      "validation_image_auroc": 0.4400249895876718
+    },
+    {
+      "epoch": 31,
+      "training_loss": 0.024531285814715153,
+      "epoch_seconds": 4.328
+    },
+    {
+      "epoch": 32,
+      "training_loss": 0.024211790544366597,
+      "epoch_seconds": 4.349
+    },
+    {
+      "epoch": 33,
+      "training_loss": 0.02399462130334642,
+      "epoch_seconds": 4.384
+    },
+    {
+      "epoch": 34,
+      "training_loss": 0.0228848114158168,
+      "epoch_seconds": 4.363
+    },
+    {
+      "epoch": 35,
+      "training_loss": 0.023380777920887927,
+      "epoch_seconds": 4.338,
+      "validation_image_auroc": 0.44700124947938363
+    },
+    {
+      "epoch": 36,
+      "training_loss": 0.023597873126467068,
+      "epoch_seconds": 4.341
+    },
+    {
+      "epoch": 37,
+      "training_loss": 0.026626008986072106,
+      "epoch_seconds": 4.353
+    },
+    {
+      "epoch": 38,
+      "training_loss": 0.023643451564089216,
+      "epoch_seconds": 4.33
+    },
+    {
+      "epoch": 39,
+      "training_loss": 0.02229167300869118,
+      "epoch_seconds": 4.35
+    },
+    {
+      "epoch": 40,
+      "training_loss": 0.02175373828621826,
+      "epoch_seconds": 4.353,
+      "validation_image_auroc": 0.4590795501874219
+    }
+  ],
+  "validation": {
+    "image_threshold": 0.30565133690834045,
+    "pixel_threshold": 0.06362878352403645,
+    "detection": {
+      "image_auroc": 0.47896709704289886,
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "f1": 0.8,
+      "confusion_matrix": {
+        "tn": 0,
+        "fp": 49,
+        "fn": 0,
+        "tp": 98
+      }
+    },
+    "segmentation": {
+      "aupro": 0.5948726213147177,
+      "iou": 0.33844810326279384,
+      "dice": 0.5057321272864357
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "category": "capsule",
+  "model": "autoencoder",
+  "selected_variant": "l1",
+  "selection_metric": "synthetic_validation_image_auroc",
+  "validation_image_auroc": 0.9076704545454546,
+  "validation_aupro": 0.7835809674913338,
+  "image_threshold": 0.3310924768447876,
+  "pixel_threshold": 0.029544845856726183,
+  "test_images": 132,
+  "test_anomalous_images": 109,
+  "test_normal_images": 23,
+  "image_auroc": 0.5743917032309533,
+  "precision": 0.8,
+  "recall": 0.03669724770642202,
+  "f1": 0.07017543859649122,
+  "aupro": 0.4007714642061524,
+  "iou": 0.041371053058501216,
+  "dice": 0.07945497032396792,
+  "latency_mean_ms": 2.801160348498701,
+  "latency_p95_ms": 3.275376899944149,
+  "fps": 356.99491481662454,
+  "fit_seconds": 356.103,
+  "confusion_matrix": {
+    "tn": 22,
+    "fp": 1,
+    "fn": 105,
+    "tp": 4
+  }
+}

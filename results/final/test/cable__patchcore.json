@@ -1,0 +1,30 @@
+{
+  "category": "cable",
+  "model": "patchcore",
+  "selected_variant": "coreset_5",
+  "selection_metric": "synthetic_validation_image_auroc",
+  "validation_image_auroc": 0.992962962962963,
+  "validation_aupro": 0.8245996670783924,
+  "image_threshold": 3.210171937942505,
+  "pixel_threshold": 2.6540915012359614,
+  "test_images": 150,
+  "test_anomalous_images": 92,
+  "test_normal_images": 58,
+  "image_auroc": 0.9405922038980511,
+  "precision": 0.9857142857142858,
+  "recall": 0.75,
+  "f1": 0.8518518518518519,
+  "aupro": 0.9086964171840841,
+  "iou": 0.41472418402181965,
+  "dice": 0.5862968749750633,
+  "latency_mean_ms": 11.683599373341167,
+  "latency_p95_ms": 13.120429050013623,
+  "fps": 85.59006244956765,
+  "fit_seconds": 8.131,
+  "confusion_matrix": {
+    "tn": 57,
+    "fp": 1,
+    "fn": 23,
+    "tp": 69
+  }
+}

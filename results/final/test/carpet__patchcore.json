@@ -1,0 +1,30 @@
+{
+  "category": "carpet",
+  "model": "patchcore",
+  "selected_variant": "coreset_5",
+  "selection_metric": "synthetic_validation_image_auroc",
+  "validation_image_auroc": 0.7569355867346939,
+  "validation_aupro": 0.8045887601988246,
+  "image_threshold": 1.2782096862792969,
+  "pixel_threshold": 2.1381192588806144,
+  "test_images": 117,
+  "test_anomalous_images": 89,
+  "test_normal_images": 28,
+  "image_auroc": 0.9317817014446227,
+  "precision": 0.7606837606837606,
+  "recall": 1.0,
+  "f1": 0.8640776699029126,
+  "aupro": 0.9448051455656339,
+  "iou": 0.3180852246349804,
+  "dice": 0.4826474323358997,
+  "latency_mean_ms": 13.168151350415567,
+  "latency_p95_ms": 14.426566800102583,
+  "fps": 75.94080394348151,
+  "fit_seconds": 10.295,
+  "confusion_matrix": {
+    "tn": 0,
+    "fp": 28,
+    "fn": 0,
+    "tp": 89
+  }
+}

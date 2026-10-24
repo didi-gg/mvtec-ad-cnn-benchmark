@@ -1,0 +1,30 @@
+{
+  "category": "capsule",
+  "model": "patchcore",
+  "selected_variant": "coreset_1",
+  "selection_metric": "synthetic_validation_image_auroc",
+  "validation_image_auroc": 0.9984504132231404,
+  "validation_aupro": 0.9218757261244003,
+  "image_threshold": 2.633240222930908,
+  "pixel_threshold": 2.7822732162475585,
+  "test_images": 132,
+  "test_anomalous_images": 109,
+  "test_normal_images": 23,
+  "image_auroc": 0.8735540486637415,
+  "precision": 0.96875,
+  "recall": 0.28440366972477066,
+  "f1": 0.4397163120567376,
+  "aupro": 0.9080468705808719,
+  "iou": 0.09692648847135125,
+  "dice": 0.17672376315103033,
+  "latency_mean_ms": 7.633818772722572,
+  "latency_p95_ms": 10.91184535007414,
+  "fps": 130.99603616125063,
+  "fit_seconds": 4.617,
+  "confusion_matrix": {
+    "tn": 22,
+    "fp": 1,
+    "fn": 78,
+    "tp": 31
+  }
+}

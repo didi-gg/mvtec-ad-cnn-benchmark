@@ -1,0 +1,30 @@
+{
+  "category": "hazelnut",
+  "model": "patchcore",
+  "selected_variant": "coreset_5",
+  "selection_metric": "synthetic_validation_image_auroc",
+  "validation_image_auroc": 0.9497863247863249,
+  "validation_aupro": 0.8829770741596029,
+  "image_threshold": 2.8643240928649902,
+  "pixel_threshold": 2.72058256149292,
+  "test_images": 110,
+  "test_anomalous_images": 70,
+  "test_normal_images": 40,
+  "image_auroc": 1.0,
+  "precision": 1.0,
+  "recall": 0.9714285714285714,
+  "f1": 0.9855072463768116,
+  "aupro": 0.9389828372925071,
+  "iou": 0.4084845240450449,
+  "dice": 0.5800340963234909,
+  "latency_mean_ms": 15.776220018158874,
+  "latency_p95_ms": 16.24537949992373,
+  "fps": 63.386539922045436,
+  "fit_seconds": 17.739,
+  "confusion_matrix": {
+    "tn": 40,
+    "fp": 0,
+    "fn": 2,
+    "tp": 68
+  }
+}

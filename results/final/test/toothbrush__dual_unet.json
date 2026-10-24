@@ -1,0 +1,30 @@
+{
+  "category": "toothbrush",
+  "model": "dual_unet",
+  "selected_variant": "large",
+  "selection_metric": "synthetic_validation_image_auroc",
+  "validation_image_auroc": 0.9496527777777778,
+  "validation_aupro": 0.9134181331552765,
+  "image_threshold": 0.277176171541214,
+  "pixel_threshold": 0.311385044455523,
+  "test_images": 42,
+  "test_anomalous_images": 30,
+  "test_normal_images": 12,
+  "image_auroc": 0.9472222222222223,
+  "precision": 0.9583333333333334,
+  "recall": 0.7666666666666667,
+  "f1": 0.8518518518518519,
+  "aupro": 0.5970925548180666,
+  "iou": 0.25128715290503867,
+  "dice": 0.40164586093869864,
+  "latency_mean_ms": 7.898274833310313,
+  "latency_p95_ms": 13.365448550064228,
+  "fps": 126.60992699096562,
+  "fit_seconds": 198.594,
+  "confusion_matrix": {
+    "tn": 11,
+    "fp": 1,
+    "fn": 7,
+    "tp": 23
+  }
+}

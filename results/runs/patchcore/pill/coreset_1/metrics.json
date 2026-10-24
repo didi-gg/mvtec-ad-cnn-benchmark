@@ -1,0 +1,63 @@
+{
+  "category": "pill",
+  "model": "patchcore",
+  "variant": "coreset_1",
+  "seed": 1926,
+  "image_size": 256,
+  "model_configuration": {
+    "backbone": "resnet18",
+    "pretrained": true,
+    "feature_layers": [
+      "layer2",
+      "layer3"
+    ],
+    "batch_size": 4,
+    "neighbors": 1,
+    "sampling": "approximate_coreset",
+    "variants": {
+      "coreset_1": {
+        "fraction": 0.01
+      },
+      "coreset_5": {
+        "fraction": 0.05
+      }
+    }
+  },
+  "variant_configuration": {
+    "fraction": 0.01
+  },
+  "best_epoch": null,
+  "best_validation_image_auroc": null,
+  "stop_reason": "completed",
+  "fit_seconds": 4.051,
+  "validation_seconds": 5.92,
+  "total_seconds": 9.971,
+  "budget_minutes": 10.0,
+  "budget_exceeded": false,
+  "fit_details": {
+    "total_features": 219136,
+    "retained_features": 2191
+  },
+  "training_history": [],
+  "validation": {
+    "image_threshold": 2.5485754013061523,
+    "pixel_threshold": 2.9151420068740843,
+    "detection": {
+      "image_auroc": 0.9809540761836952,
+      "precision": 0.9805825242718447,
+      "recall": 0.9528301886792453,
+      "f1": 0.9665071770334929,
+      "confusion_matrix": {
+        "tn": 51,
+        "fp": 2,
+        "fn": 5,
+        "tp": 101
+      }
+    },
+    "segmentation": {
+      "aupro": 0.9053903630913024,
+      "iou": 0.5781263433762747,
+      "dice": 0.7326743461355821
+    }
+  }
+}

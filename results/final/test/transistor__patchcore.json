@@ -1,0 +1,30 @@
+{
+  "category": "transistor",
+  "model": "patchcore",
+  "selected_variant": "coreset_5",
+  "selection_metric": "synthetic_validation_image_auroc",
+  "validation_image_auroc": 0.9866143861546781,
+  "validation_aupro": 0.8983116857033051,
+  "image_threshold": 2.744098424911499,
+  "pixel_threshold": 2.6088790607452386,
+  "test_images": 100,
+  "test_anomalous_images": 40,
+  "test_normal_images": 60,
+  "image_auroc": 0.9550000000000001,
+  "precision": 0.9354838709677419,
+  "recall": 0.725,
+  "f1": 0.8169014084507042,
+  "aupro": 0.8663718797181682,
+  "iou": 0.24556194552182248,
+  "dice": 0.39429904936433396,
+  "latency_mean_ms": 11.961964990005072,
+  "latency_p95_ms": 13.654418450005323,
+  "fps": 83.59830519781316,
+  "fit_seconds": 10.089,
+  "confusion_matrix": {
+    "tn": 58,
+    "fp": 2,
+    "fn": 11,
+    "tp": 29
+  }
+}

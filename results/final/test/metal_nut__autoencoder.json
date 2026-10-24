@@ -1,0 +1,30 @@
+{
+  "category": "metal_nut",
+  "model": "autoencoder",
+  "selected_variant": "l1",
+  "selection_metric": "synthetic_validation_image_auroc",
+  "validation_image_auroc": 0.7594266528925621,
+  "validation_aupro": 0.4410522241611267,
+  "image_threshold": 0.2702372372150421,
+  "pixel_threshold": 0.017864873632788658,
+  "test_images": 115,
+  "test_anomalous_images": 93,
+  "test_normal_images": 22,
+  "image_auroc": 0.406158357771261,
+  "precision": 0.7115384615384616,
+  "recall": 0.3978494623655914,
+  "f1": 0.5103448275862069,
+  "aupro": 0.3839903490891755,
+  "iou": 0.18145174598502847,
+  "dice": 0.30716742617997345,
+  "latency_mean_ms": 2.4059264782606435,
+  "latency_p95_ms": 3.1389919000275768,
+  "fps": 415.64029866903775,
+  "fit_seconds": 192.003,
+  "confusion_matrix": {
+    "tn": 7,
+    "fp": 15,
+    "fn": 56,
+    "tp": 37
+  }
+}
