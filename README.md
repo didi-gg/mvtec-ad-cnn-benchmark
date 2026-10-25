@@ -29,17 +29,17 @@ Se utilizarán las 15 categorías del dataset
 | Característica                   | Cantidad |
 | -------------------------------- | -------: |
 | Imágenes totales                 | 5.354    |
-| Entrenamiento oficial (normales) | 3.629    |
-| Test oficial                     | 1.725    |
+| Entrenamiento (normales) | 3.629    |
+| Test                     | 1.725    |
 | Imágenes defectuosas de test     | 1.258    |
 ### Particiones
 
-Se dividió el entrenamiento oficial por categoría utilizando una proporción 80/20 y la semilla **1926**
+Se dividió el entrenamiento por categoría utilizando una proporción 80/20 y la semilla **1926**
 | Partición     | Imágenes |
 | ------------- | -------: |
 | Entrenamiento | 2.903    |
 | Validación    | 726      |
-| Test oficial  | 1.725    |
+| Test  | 1.725    |
 La proporción 80/20 busca conservar suficientes ejemplos para aprender patrones normales y reservar imágenes independientes para validación
 
 La auditoría SHA-256 no encontró duplicados exactos ni coincidencias entre entrenamiento y prueba
@@ -103,7 +103,7 @@ La validación permitirá:
 - Comparar configuraciones
 - Seleccionar checkpoints
 - Establecer umbrales de clasificación y segmentación
-- Calcular métricas sin utilizar el test oficial
+- Calcular métricas sin utilizar el test
 
 La generación de anomalías para entrenar las dos U-Net utilizará exclusivamente imágenes del conjunto de entrenamiento y será independiente de las imágenes reservadas para validación
 
@@ -123,7 +123,7 @@ La generación de anomalías para entrenar las dos U-Net utilizará exclusivamen
 | **AUPRO** | Métrica principal para evaluar la localización de regiones defectuosas. |
 | IoU       | Medir la superposición entre máscaras predichas y reales.               |
 | Dice      | Medir la similitud entre las regiones predichas y reales.               |
-Los umbrales necesarios para precision, recall, F1, IoU y Dice se fijarán mediante validación, sin utilizar el test oficial.
+Los umbrales necesarios para precision, recall, F1, IoU y Dice se fijarán mediante validación, sin utilizar el test.
 
 ### Eficiencia computacional
 | Métrica                | Propósito                                          |
@@ -140,13 +140,120 @@ Los tres enfoques se evaluarán bajo condiciones comunes:
 - Resolución de entrada común de 256 × 256 píxeles, sujeta a verificación en el piloto
 - Preprocesamiento compatible con cada arquitectura
 - Las mismas imágenes normales y anomalías sintéticas de validación
-- Las mismas métricas y test oficial
+- Las mismas métricas y test
 - Un presupuesto máximo común de tiempo de ajuste local por modelo y categoría
 - Registro del tiempo real utilizado, criterios de parada y recursos computacionales
 
 El presupuesto definitivo se establecerá después de realizar un piloto de rendimiento en el hardware disponible
 
 PatchCore utiliza una ResNet18 preentrenada en ImageNet. El costo de este preentrenamiento externo no forma parte del tiempo de ajuste local y se considerará al interpretar los resultados
+
+## Instrucciones de ejecución
+
+Los siguientes comandos deben ejecutarse desde la raíz del repositorio.
+
+### 1. Crear el entorno e instalar dependencias
+
+Se requiere Conda o Miniforge. El script crea el entorno `mvtec-cnn`, instala las dependencias y registra el kernel de Jupyter:
+
+```bash
+bash virtual_env.sh
+conda activate mvtec-cnn
+```
+
+El dataset MVTec AD debe estar disponible en `data/mvtec_anomaly_detection/`, con una carpeta por categoría (por ejemplo, `data/mvtec_anomaly_detection/bottle/`). Las particiones reproducibles se generan con:
+
+```bash
+python scripts/prepare_data.py
+```
+
+### 2. Ejecutar un piloto de hardware
+
+Antes de lanzar todos los experimentos, se puede medir el costo de los tres modelos en categorías representativas:
+
+```bash
+python scripts/pilot.py --category bottle
+python scripts/pilot.py --category carpet
+python scripts/pilot.py --category toothbrush
+```
+
+Los diagnósticos se guardan en `results/hardware/`.
+
+### 3. Preparar la validación sintética
+
+La validación común utiliza anomalías `cutpaste` e `irregular_texture` generadas a partir de las imágenes normales reservadas para validación:
+
+```bash
+python scripts/prepare_synthetic_validation.py --all
+```
+
+Para procesar una sola categoría:
+
+```bash
+python scripts/prepare_synthetic_validation.py --category bottle
+```
+
+### 4. Entrenar los modelos
+
+Primero se puede comprobar el plan de ejecución sin entrenar:
+
+```bash
+python scripts/run_experiments.py --dry-run
+```
+
+Después, se ejecutan las dos variantes de cada modelo en las 15 categorías:
+
+```bash
+python scripts/run_experiments.py
+```
+
+También es posible limitar la ejecución a un modelo o a determinadas categorías:
+
+```bash
+python scripts/run_experiments.py --models patchcore
+python scripts/run_experiments.py --categories cable carpet
+```
+
+Los checkpoints y las métricas de validación se almacenan en `results/runs/`. Las ejecuciones completas se omiten automáticamente; para repetirlas se puede utilizar `--force`.
+
+### 5. Evaluar en el test
+
+La evaluación selecciona automáticamente la mejor variante según la validación y no vuelve a entrenar ni optimiza umbrales con el test:
+La evaluación selecciona automáticamente la mejor variante según la validación y no vuelve a entrenar ni optimiza umbrales con el test:
+
+```bash
+python scripts/evaluate.py --dry-run
+python scripts/evaluate.py
+```
+
+Para evaluar una sola categoría o modelo:
+
+```bash
+python scripts/evaluate.py --category bottle --model patchcore
+```
+
+Los resultados finales se guardan en `results/final/test/` y los agregados en `results/final/`.
+
+### 6. Generar visualizaciones
+
+Después de completar la evaluación, se pueden generar ejemplos de predicciones y errores:
+
+```bash
+python -m scripts.visualize_predictions --category bottle
+python -m scripts.visualize_predictions --category tile --examples-per-case 2
+```
+
+Las figuras y el índice por imagen se guardan en `results/figures/test_examples/`.
+
+### 7. Ejecutar los notebooks
+
+Para explorar los análisis paso a paso:
+
+```bash
+jupyter lab
+```
+
+En Jupyter se debe seleccionar el kernel `Python (MVTec CNN)` y ejecutar los notebooks de `notebooks/` en orden numérico.
 
 ## Evaluación final
 Una vez seleccionadas las configuraciones mediante validación:

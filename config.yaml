@@ -30,7 +30,7 @@ validation:
   synthetic_anomalies:
     - cutpaste
     - irregular_texture
-  # Selección y calibración sin utilizar el test oficial
+  # Selección y calibración sin utilizar el test
   selection_metric: image_auroc
   image_threshold: optimize_f1
   pixel_threshold: optimize_dice
